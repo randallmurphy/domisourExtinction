@@ -22,12 +22,29 @@ const featherDino = document.querySelector('#feathers');
         console.log('Feather Dino clicked!');
       });
 
+let toggleColor = 'white';
 const toggle = document.querySelector('#toggle');
+const dinoRow = document.querySelector('#row');      
       toggle.addEventListener('click',()=>{
-      const dinoRow = document.querySelector('#row');
+        if(toggleColor === 'white'){
+            
             dinoRow.style.backgroundColor = 'pink';
+            toggleColor = 'pink';
             console.log('button clicked background color changed to pink');
+        }else{
+            dinoRow.style.backgroundColor = 'white';
+            toggleColor = 'white';
+            console.log('button clicked background color changed back to white'); 
+        }
+      
       });
 
-      
+const bigDino = document.querySelector('#biggify');
+      bigDino.addEventListener('mouseover',()=>{
+      bigDino.style.width = '200px';
+      console.log('big dino is hovered and width increased to 200 px')
+      })
+      bigDino.addEventListener('mouseout',()=>{
+            bigDino.style.width = '100px'
+      });
 
